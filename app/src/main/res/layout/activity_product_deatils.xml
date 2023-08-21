@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDeatilsActivity">
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="70dp"
+        android:text="XIOMI"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDetNomb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="24dp"
+        android:text="Blazer Mujer Zuri Azul Pacífic"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ivDetProd"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/ivDetProd"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:paddingStart="41dp"
+        android:paddingEnd="41dp"
+
+        android:scaleType="centerCrop"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDetPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDetNomb"
+        app:srcCompat="@drawable/blazer"
+        tools:srcCompat="@drawable/blazer" />
+
+    <TextView
+        android:id="@+id/tvDetPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="S/50.00"
+        android:textColor="#DC1111"
+        app:layout_constraintBottom_toTopOf="@+id/btnDetAgregar"
+        app:layout_constraintStart_toStartOf="@+id/btnDetAgregar" />
+
+    <Button
+        android:id="@+id/btnDetAgregar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginTop="400dp"
+        android:backgroundTint="#553F2C"
+        android:drawableRight="@drawable/ic_baseline_shopping_cart_24"
+        android:text="aGREGAR AL CARRITO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="Descripcion"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtnombrecuenta"
+        app:layout_constraintStart_toStartOf="@+id/txtnombrecuenta"
+        app:layout_constraintTop_toBottomOf="@+id/btnDetAgregar" />
+
+    <TextView
+        android:id="@+id/txtnombrecuenta"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="44dp"
+        android:text="Blazer Con bolsillos delantero"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDetAgregar" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:srcCompat="@drawable/logo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

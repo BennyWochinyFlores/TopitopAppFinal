@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="#f5f5f5"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/publicidad"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="spread" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <!-- ImageButton para agregar a favoritos -->
+
+
+        <!-- TextView para el nombre del producto -->
+
+        <!-- TextView para el precio -->
+
+        <TextView
+            android:id="@+id/txtproducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/quicksand_medium"
+            android:maxLines="3"
+            android:paddingStart="8dp"
+            android:text="Producto"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/productImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtprecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:paddingStart="8dp"
+            android:text="Precio"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/productImageView"
+            app:layout_constraintTop_toBottomOf="@+id/txtproducto" />
+        <TextView
+            android:id="@+id/txtcantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:paddingStart="8dp"
+            android:text="cantidad: 1"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp"
+
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/productImageView"
+            app:layout_constraintTop_toBottomOf="@+id/txtprecio" />
+        <!-- ImageButton para agregar al carrito de compras -->
+        <ImageButton
+            android:id="@+id/removeCard"
+            android:layout_width="37dp"
+            android:layout_height="33dp"
+            android:background="@drawable/forma_cuadrada"
+            android:contentDescription="Add to Cart"
+            android:src="@drawable/baseline_delete_24"
+
+            android:layout_marginTop="8dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+             />
+
+        <ImageButton
+            android:id="@+id/btnrestaruno"
+            android:layout_width="37dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/forma_cuadrada"
+
+            android:contentDescription="Add to Cart"
+            android:src="@drawable/baseline_horizontal_rule_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnsumaruno"
+            />
+
+        <ImageButton
+            android:id="@+id/btnsumaruno"
+
+            android:layout_width="37dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/forma_cuadrada"
+            android:contentDescription="Add to Cart"
+            android:src="@drawable/baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_menu">
+    <fragment
+        android:id="@id/navigation_cuenta"
+        android:name="bwf.idat.topitop.CuentaFragment"
+        android:label="fragment_cuenta"
+        tools:layout="@layout/fragment_cuenta" >
+        <action
+            android:id="@+id/action_navigation_cuenta_to_navigation_menu"
+            app:destination="@id/navigation_menu" />
+        <action
+            android:id="@+id/action_navigation_cuenta_to_menuLogin"
+            app:destination="@id/menuLogin" />
+    </fragment>
+    <fragment
+        android:id="@id/navigation_informacion"
+        android:name="bwf.idat.topitop.InformationFragment"
+        android:label="fragment_informacion"
+        tools:layout="@layout/fragment_informacion" />
+    <fragment
+        android:id="@id/navigation_menu"
+        android:name="bwf.idat.topitopapp.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_navigation_menu_to_productDeatilsFragment"
+            app:destination="@id/productDeatilsFragment" />
+    </fragment>
+    <fragment
+        android:id="@id/navigation_favorito"
+        android:name="bwf.idat.topitopapp.FavoritoFragment"
+        android:label="fragment_favorito"
+        tools:layout="@layout/fragment_favorito" >
+        <action
+            android:id="@+id/action_navigation_favorito_to_productDeatilsFragment"
+            app:destination="@id/productDeatilsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDeatilsFragment"
+        android:name="bwf.idat.topitop.ProductDeatilsFragment"
+        android:label="fragment_product_deatils"
+        tools:layout="@layout/fragment_product_deatils" />
+    <activity
+        android:id="@+id/menuLogin"
+        android:name="bwf.idat.topitopapp.MenuLogin"
+        android:label="activity_menu_login"
+        tools:layout="@layout/activity_menu_login" />
+
+</navigation>
