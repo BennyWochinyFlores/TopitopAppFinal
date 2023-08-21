@@ -22,13 +22,18 @@ class MenuLogin : AppCompatActivity() {
         binding = ActivityMenuLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         sharedPref = getSharedPreferences("MySharedPrefs", Context.MODE_PRIVATE)
 
         val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
 
         if (isLoggedIn) {
             val intent = Intent(this@MenuLogin, MenuPrincipal::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.btnregistrar.setOnClickListener {
+            val intent = Intent(this@MenuLogin, CrearCuenta::class.java)
             startActivity(intent)
             finish()
         }
@@ -55,7 +60,9 @@ class MenuLogin : AppCompatActivity() {
 
         OkHttpClient().newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
-
+                runOnUiThread {
+                    showToast("Error en la conexión")
+                }
             }
 
             @SuppressLint("ResourceType")
@@ -81,10 +88,14 @@ class MenuLogin : AppCompatActivity() {
                         val intent = Intent(this@MenuLogin, MenuPrincipal::class.java)
                         startActivity(intent)
                         finish()
+                        runOnUiThread {
+                            showToast("Bienvenido a Topitop ${username}")
+                        }
                     }
                 } else {
-                    val message = jsonResponse.optString("message", "no es valido")
-                    showToast(message)
+                    runOnUiThread {
+                        showToast("Usuario no Encontrado")
+                    }
                 }
             }
         })
@@ -94,3 +105,4 @@ class MenuLogin : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
+
